@@ -1,39 +1,102 @@
+<!-- ============================================================================== -->
+<!-- FILE: index.html (Home Page)                                                     -->
+<!-- ============================================================================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Metadata for the browser -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hsgportfolio.com</title>
-    
-    <!-- Basic Styling to center the content -->
+    <title>HSG Portfolio | AI & Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f2f5;
-            color: #333;
+            font-family: 'Inter', sans-serif;
         }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            font-size: 2.5em;
-        }
-        p {
-            font-size: 1.2em;
-            color: #666;
+        .gradient-text {
+            background: -webkit-linear-gradient(#4F46E5, #9333EA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>hsgportfolio.com</h1>
-        <p>Coming Soon</p>
-    </div>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-gray-800">HSG</a>
+            <div class="space-x-6 text-gray-600">
+                <a href="automation.html" class="hover:text-indigo-600">Workflow Automation</a>
+                <a href="prompt-engineering.html" class="hover:text-indigo-600">Prompt Engineering</a>
+                <a href="certs.html" class="hover:text-indigo-600">Skills & Certs</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        
+        <!-- Hero Section -->
+        <section class="text-center py-16">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4">
+                Designing <span class="gradient-text">Efficient Systems</span>
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                I specialize in analyzing processes and implementing AI-driven automations to dramatically increase efficiency and generate measurable results. From marketing workflows to complex technical challenges, I find ways to make things work better.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Case Studies & Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1: Workflow Automation -->
+                <a href="automation.html" class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden group">
+                    <div class="p-8">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">AI-Powered Email Automation</h3>
+                        <p class="text-gray-600 mb-4">A case study on developing a system that reduced manual email drafting time from 50 minutes down to just 5, achieving a 66% increase in labor efficiency.</p>
+                        <span class="font-semibold text-indigo-600 group-hover:underline">View Case Study →</span>
+                    </div>
+                </a>
+
+                <!-- Project Card 2: Prompt Engineering -->
+                <a href="prompt-engineering.html" class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden group">
+                    <div class="p-8">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Iterative Prompt Engineering</h3>
+                        <p class="text-gray-600 mb-4">An exploration of the iterative process used to refine prompts for Large Language Models, transforming robotic outputs into professional, human-like marketing copy.</p>
+                        <span class="font-semibold text-indigo-600 group-hover:underline">Explore Process →</span>
+                    </div>
+                </a>
+
+                <!-- Project Card 3: Skills & Certs -->
+                <a href="certs.html" class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden group">
+                     <div class="p-8">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Skills & Certifications</h3>
+                        <p class="text-gray-600 mb-4">A summary of my technical skills and formal education, including an A.S. in High-Performance Automotive Technology and proficiencies in AI and automation tools.</p>
+                        <span class="font-semibold text-indigo-600 group-hover:underline">View Skills →</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 HSG Portfolio. All Rights Reserved.</p>
+            <p class="mt-2">Contact: <a href="mailto:contact@hsgportfolio.com" class="text-indigo-400 hover:underline">contact@hsgportfolio.com</a></p>
+        </div>
+    </footer>
+
 </body>
 </html>
+
+
+
+
+
+

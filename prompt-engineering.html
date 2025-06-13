@@ -1,0 +1,90 @@
+<!-- ============================================================================== -->
+<!-- FILE: prompt-engineering.html (Prompt Engineering Page)                        -->
+<!-- ============================================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Engineering | HSG Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .code-block { background-color: #2d3748; color: #e2e8f0; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-gray-800">HSG</a>
+            <div class="space-x-6 text-gray-600">
+                <a href="automation.html" class="hover:text-indigo-600">Workflow Automation</a>
+                <a href="prompt-engineering.html" class="text-indigo-600 font-semibold">Prompt Engineering</a>
+                <a href="certs.html" class="hover:text-indigo-600">Skills & Certs</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto">
+            <article class="prose lg:prose-xl max-w-none">
+                <h1 class="text-4xl font-bold mb-2">Process: Iterative Prompt Engineering</h1>
+                <p class="text-lg text-gray-500 mb-8">Refining AI instructions to achieve a specific, high-quality output.</p>
+                
+                <section>
+                    <h2 class="text-2xl font-semibold mt-8 mb-4">The Goal</h2>
+                    <p>The objective was to create a prompt that could generate a three-paragraph blog post introduction for a SaaS company. The target audience was small business owners hesitant about AI, requiring an enthusiastic, informative, and reassuring tone while avoiding robotic language. The process involved multiple iterations, adjusting constraints, tone, and temperature to move from a generic AI output to a polished, professional piece of marketing copy.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mt-8 mb-4">The Final Prompt</h2>
+                    <p>After several iterations, adjusting parameters like temperature and adding more specific constraints about tone and context, the following prompt produced the best results:</p>
+                    <div class="code-block p-6 rounded-lg my-6 overflow-x-auto">
+                        <pre><code class="language-markdown">You are a marketing expert writing for a SaaS company blog.
+
+Generate a 3-paragraph blog post introduction.
+
+Each paragraph should be concise, containing 3-4 sentences, and clearly separated by paragraph breaks.
+
+Target audience: Small business owners who might be hesitant about AI.
+Tone: Enthusiastic, informative, inspiring, and reassuring.
+Include keywords like "efficiency," "scalability," and "democratizing content."
+Avoid sounding robotic.
+End with a clear hook encouraging them to read more about integrating AI.
+Do not be overly formal, overly friendly, stay strictly professional.
+Use common SaaS acronyms without spelling out what they mean.
+Write this as if you're explaining this to a colleague over coffee.
+Maintain a consistently natural, engaging, and highly professional voice.
+Vary sentence length, but lean towards conciseness.
+Write at most 300 words.</code></pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold mt-8 mb-4">Resulting Output (at Temperature 1.0)</h2>
+                    <p>This well-constructed prompt allowed for a high temperature setting without sacrificing coherence, resulting in a natural and engaging tone that met all objectives.</p>
+                    <div class="bg-gray-100 border-l-4 border-indigo-500 p-6 rounded-r-lg my-6 italic">
+                        <p class="mb-4">Running a small business is tough. You're juggling a million things, and often feel like you're drowning in tasks. But what if I told you there's a way to boost efficiency and scalability without adding to your already overflowing to-do list? Artificial intelligence is no longer a futuristic fantasy; it's a practical tool readily available to help you thrive.</p>
+                        <p class="mb-4">We understand that adopting new technologies like AI can feel daunting. Many small business owners worry about the complexity and cost. However, the reality is that modern AI solutions, particularly SaaS offerings, are designed with user-friendliness in mind. They're built to empower you, not overwhelm you.</p>
+                        <p>Think about the possibilities: Imagine effortlessly generating high-quality marketing materials, automating repetitive tasks, and gaining invaluable data-driven insights, all while significantly reducing your workload. AI is democratizing content creation and business intelligence, putting powerful tools in the hands of everyone. Ready to discover how you can leverage AI for explosive growth? Let's dive in.</p>
+                    </div>
+                </section>
+                <div class="mt-12 border-t pt-6">
+                     <a href="index.html" class="text-indigo-600 hover:underline">← Back to Home</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 HSG Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
