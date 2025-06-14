@@ -15,14 +15,30 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-xl font-bold text-gray-800">HSG</a>
-            <div class="space-x-6 text-gray-600">
+            
+            <!-- Mobile Menu (No JS) -->
+            <div class="md:hidden">
+                <input type="checkbox" id="menu-toggle" class="hidden peer">
+                <label for="menu-toggle" class="cursor-pointer">
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </label>
+                <div class="hidden absolute top-16 left-0 w-full bg-white shadow-lg peer-checked:block">
+                    <a href="automation.html" class="block py-3 px-6 text-center hover:bg-gray-100">Workflow Automation</a>
+                    <a href="prompt-engineering.html" class="block py-3 px-6 text-center hover:bg-gray-100">Prompt Engineering</a>
+                    <a href="certs.html" class="block py-3 px-6 text-center hover:bg-gray-100">Certifications</a>
+                    <a href="skills.html" class="block py-3 px-6 text-center text-indigo-600 bg-gray-100 font-semibold">Skills</a> 
+                    <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-100">Contact</a>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex md:items-center md:space-x-6">
                 <a href="automation.html" class="hover:text-indigo-600">Workflow Automation</a>
                 <a href="prompt-engineering.html" class="hover:text-indigo-600">Prompt Engineering</a>
                 <a href="certs.html" class="hover:text-indigo-600">Certifications</a>
                 <a href="skills.html" class="text-indigo-600 font-semibold">Skills</a> 
                 <a href="contact.html" class="hover:text-indigo-600">Contact</a>
             </div>
-                
         </nav>
     </header>
 
@@ -32,8 +48,9 @@
                 <h1 class="text-4xl font-bold mb-8">Comprehensive Skill Overview</h1>
                 <p class="text-lg text-gray-500 mb-8">A robust and diverse skill set, demonstrating proficiency across full-stack web development, data science, artificial intelligence, and cybersecurity, underpinned by strong foundational programming principles.</p>
 
+                <!-- GitHub Link Section -->
                 <section class="text-center my-8">
-                    <a href="https://github.com/HimayGora" 
+                    <a href="https://github.com/your-username" 
                        target="_blank" 
                        rel="noopener noreferrer"
                        class="inline-block bg-gray-800 text-white text-lg font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-900 transition-colors duration-300 transform hover:scale-105">
