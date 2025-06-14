@@ -20,23 +20,28 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-xl font-bold text-gray-800">HSG</a>
             
-            <!-- Mobile Menu (No JS) -->
+            <!-- Mobile Menu Wrapper -->
             <div class="md:hidden">
+                <!-- Invisible checkbox peer -->
                 <input type="checkbox" id="menu-toggle" class="hidden peer">
+                
+                <!-- Hamburger Button (Label for checkbox) -->
                 <label for="menu-toggle" class="cursor-pointer">
                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </label>
+                
+                <!-- Mobile Menu (Appears when checkbox is checked) -->
                 <div class="hidden absolute top-16 left-0 w-full bg-white shadow-lg peer-checked:block">
-                    <a href="automation.html" class="block py-3 px-6 text-center text-indigo-600 bg-gray-100 font-semibold">Workflow Automation</a>
-                    <a href="prompt-engineering.html" class="block py-3 px-6 text-center hover:bg-gray-100">Prompt Engineering</a>
-                    <a href="certs.html" class="block py-3 px-6 text-center hover:bg-gray-100">Certifications</a>
-                    <a href="skills.html" class="block py-3 px-6 text-center hover:bg-gray-100">Skills</a>
-                    <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-100">Contact</a>
+                    <a href="automation.html" class="block py-3 px-6 text-center border-b bg-indigo-50 text-indigo-600 font-semibold">Workflow Automation</a>
+                    <a href="prompt-engineering.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Prompt Engineering</a>
+                    <a href="certs.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Certifications</a>
+                    <a href="skills.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Skills</a>
+                    <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-50">Contact</a>
                 </div>
             </div>
 
             <!-- Desktop Menu -->
-            <div class="hidden md:flex md:items-center md:space-x-6">
+            <div class="hidden md:flex items-center space-x-6">
                 <a href="automation.html" class="text-indigo-600 font-semibold">Workflow Automation</a>
                 <a href="prompt-engineering.html" class="hover:text-indigo-600">Prompt Engineering</a>
                 <a href="certs.html" class="hover:text-indigo-600">Certifications</a>
