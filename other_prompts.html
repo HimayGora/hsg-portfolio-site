@@ -50,124 +50,222 @@
 
     <main class="container mx-auto px-6 py-16">
         <div class="text-center">
-            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Prompt Engineering Case Studies</h1>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Prompt Engineering Showcase</h1>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                A deep dive into the iterative process of refining AI prompts across various use cases. Each example shows the evolution from an initial concept to a final, high-quality output, detailing the analysis and adjustments made at each step.
+                A collection of case studies demonstrating the iterative process of refining AI prompts. Each example shows the evolution from an initial idea to a high-quality, specific, and reliable output.
             </p>
         </div>
 
-        <div class="max-w-4xl mx-auto mt-12 space-y-4">
-            
-            <div class="bg-white border border-gray-200 rounded-lg">
-                <button class="accordion-toggle flex justify-between items-center w-full p-6 text-left font-semibold text-xl">
-                    <span>Case Study: Blog Post Content Generation</span>
-                    <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="accordion-content p-6 pt-0">
-                    <p class="mb-6 text-gray-600"><strong>Goal:</strong> Generate a 3-paragraph blog post introduction for a SaaS company targeting small business owners who are hesitant about AI, with an enthusiastic and reassuring tone.</p>
-                    <h4 class="font-semibold text-lg mb-2">Iteration 1 (Temp 0.1) - Analysis</h4>
-                    <div class="analysis-block p-4 rounded mb-4">
-                        <p>The initial output at a very low temperature was generic and robotic. It lacked a human touch and used common marketing clichés, failing to invoke a genuine response.</p>
-                    </div>
-                    <h4 class="font-semibold text-lg mb-2">Iteration 2 (Temp 0.3) - Analysis</h4>
-                     <div class="analysis-block p-4 rounded mb-4">
-                        <p>Adding more structure and a slightly higher temperature helped, but the tone still felt like a junior employee trying to sound professional, with some AI-isms remaining.</p>
-                    </div>
-                    <h4 class="font-semibold text-lg mb-2">Final Iteration (Temp 1.0) - Prompt & Analysis</h4>
+        <div class="mt-12">
+            <!-- Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
+                <button class="tab-button tab-active px-4 py-2 font-semibold border-b-2" onclick="openTab(event, 'blog')">Blog Intro</button>
+                <button class="tab-button px-4 py-2 font-semibold border-b-2 border-transparent" onclick="openTab(event, 'sales')">Sales Page</button>
+                <button class="tab-button px-4 py-2 font-semibold border-b-2 border-transparent" onclick="openTab(event, 'campaign')">Social Media</button>
+                <button class="tab-button px-4 py-2 font-semibold border-b-2 border-transparent" onclick="openTab(event, 'landing')">Landing Page</button>
+                <button class="tab-button px-4 py-2 font-semibold border-b-2 border-transparent" onclick="openTab(event, 'memo')">HR Memo</button>
+                <button class="tab-button px-4 py-2 font-semibold border-b-2 border-transparent" onclick="openTab(event, 'chatbot')">Chatbot</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="blog" class="tab-content">
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-4">Case Study: Blog Post Introduction</h2>
+                    <p class="mb-6 text-gray-600"><strong>Goal:</strong> Generate a 3-paragraph blog post intro for a SaaS company, targeting small business owners hesitant about AI. The tone needed to be enthusiastic, informative, and reassuring.</p>
+                    
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Iteration 1: Initial Prompt (Temp: 0.1)</h3>
                     <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
-                        <pre><code>You are a marketing expert writing for a SaaS company blog...
-Generate a 3-paragraph blog post introduction...
+                        <pre><code>You are a marketing expert...
+Write a 3-paragraph, engaging blog post introduction about "The Future of AI in Content Creation."
+Target audience: Small business owners...
+Tone: Enthusiastic, informative...
+Include keywords...
+Avoid sounding robotic. Write 100-150 words.
+End with a clear hook...</code></pre>
+                    </div>
+                    <div class="analysis-block p-4 rounded-lg my-4">
+                        <p><strong>Analysis:</strong> At a low temperature, the output sounded too much like generic AI copy. The language was bland and would likely be dismissed by readers as low-effort. It lacked a persuasive, human touch.</p>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Final Iteration: Refined Prompt (Temp: 1.0)</h3>
+                    <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
+                        <pre><code>You are a marketing expert writing for a SaaS company blog.
+Generate a 3-paragraph blog post introduction.
+Each paragraph should be concise, containing 3-4 sentences...
 ...Do not be overly formal, overly friendly, stay strictly professional.
 Use common SaaS acronyms without spelling out what they mean.
-Write this as if you're explaining this to a colleague over coffee...</code></pre>
+Write this as if you're explaining this to a colleague over coffee.
+Maintain a consistently natural, engaging, and highly professional voice.
+Vary sentence length, but lean towards conciseness.
+Write at most 300 words.</code></pre>
                     </div>
-                    <div class="analysis-block p-4 rounded mb-4">
-                        <p><strong>Final Analysis:</strong> A well-constructed prompt with specific persona details and constraints allowed for a high temperature of 1.0. This is unusual as high temperatures can lead to factual errors, but the strong prompt mitigated this risk, resulting in a natural and engaging output.</p>
+                    <div class="analysis-block p-4 rounded-lg my-4">
+                        <p><strong>Analysis:</strong> By adding more specific persona constraints ("explaining to a colleague"), defining the professional tone, and increasing the temperature to 1.0 for creativity, the prompt was well-constrained enough to prevent nonsensical output while allowing for a more natural, engaging voice.</p>
                     </div>
-                    <h4 class="font-semibold text-lg mb-2">Final Output</h4>
-                    <div class="output-block p-4 rounded">
-                        <p class="italic">"Running a small business is tough. You're juggling a million things, and often feel like you're drowning in tasks. But what if I told you there's a way to boost efficiency and scalability without adding to your already overflowing to-do list?..."</p>
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Final Output</h3>
+                    <div class="output-block p-4 rounded-lg my-4 italic">
+                        <p class="mb-4">Running a small business is tough. You're juggling a million things, and often feel like you're drowning in tasks. But what if I told you there's a way to boost efficiency and scalability without adding to your already overflowing to-do list? Artificial intelligence is no longer a futuristic fantasy; it's a practical tool readily available to help you thrive.</p>
+                        <p class="mb-4">We understand that adopting new technologies like AI can feel daunting. Many small business owners worry about the complexity and cost. However, the reality is that modern AI solutions, particularly SaaS offerings, are designed with user-friendliness in mind. They're built to empower you, not overwhelm you.</p>
+                        <p>Think about the possibilities: Imagine effortlessly generating high-quality marketing materials, automating repetitive tasks, and gaining invaluable data-driven insights, all while significantly reducing your workload. AI is democratizing content creation and business intelligence, putting powerful tools in the hands of everyone. Ready to discover how you can leverage AI for explosive growth? Let's dive in.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded-lg">
-                <button class="accordion-toggle flex justify-between items-center w-full p-6 text-left font-semibold text-xl">
-                    <span>Case Study: B2B SaaS Sales Page</span>
-                    <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="accordion-content p-6 pt-0">
-                    <p class="mb-6 text-gray-600"><strong>Goal:</strong> Generate compelling, long-form sales page copy for an AI analytics platform for non-profits, with a primary goal of driving sign-ups for a free demo.</p>
-                    <h4 class="font-semibold text-lg mb-2">Final Iteration (Temp 0.4) - Prompt & Analysis</h4>
+            <div id="sales" class="tab-content hidden">
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-4">Case Study: B2B SaaS Sales Page</h2>
+                    <p class="mb-6 text-gray-600"><strong>Goal:</strong> Generate long-form sales copy for "ImpactMetrics AI," an analytics platform for non-profits. The copy needed to be empathetic, drive demo sign-ups, and focus on mission impact.</p>
+                    
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Final Iteration: Refined Prompt (Temp: 0.4)</h3>
                     <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
                         <pre><code>Persona: You are a highly empathetic and results-driven B2B SaaS marketing copywriter with 15 years of experience...
+Goal: Generate compelling, long-form sales page copy...
 ...
-Negative Constraints: Do not sound robotic. Do not sound like an intern. Do not overuse corporate jargon. It is not a conversation, this is a sales page. Do not ask normal conversational questions or statements.
+Negative Constraints: Do not sound robotic. Do not sound like an intern. Do not overuse corporate jargon. It is not a conversation; this is a sales page. Do not ask normal conversational questions or statements.
 ...
+Tone/Style: Empathetic, empowering, professional yet approachable...
 </code></pre>
                     </div>
-                    <div class="analysis-block p-4 rounded mb-4">
-                        <p><strong>Final Analysis:</strong> This prompt succeeded by layering a deep, empathetic persona with very specific negative constraints. Explicitly stating "this is a sales page, not a conversation" was crucial to guide the AI to the correct balance between a professional sales pitch and a relatable tone.</p>
+                    <div class="analysis-block p-4 rounded-lg my-4">
+                        <p><strong>Analysis:</strong> The final prompt succeeded by layering a deep persona with highly specific negative constraints. Explicitly stating "this is a sales page, not a conversation" while still asking for an "approachable" tone guided the AI to the correct balance between professional copy and empathetic messaging.</p>
                     </div>
-                    <h4 class="font-semibold text-lg mb-2">Final Output</h4>
-                    <div class="output-block p-4 rounded">
+
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Final Output</h3>
+                    <div class="output-block p-4 rounded-lg my-4">
                         <p class="font-bold">Headline: Amplify Your Mission: AI for Non-Profit Impact</p>
-                        <p class="font-semibold mb-2">Sub-Headline: ImpactMetrics AI: Turn data into demonstrable results, effortlessly.</p>
-                        <p class="italic">"Running a non-profit is a labor of love, fueled by passion and a deep commitment to your cause. But amidst the tireless dedication, you're likely juggling limited resources, stretched staff, and the constant pressure to prove your impact..."</p>
+                        <p class="font-semibold mb-4">Sub-Headline: ImpactMetrics AI: Turn data into demonstrable results, effortlessly.</p>
+                        <p class="mb-4">Running a non-profit is a labor of love, fueled by passion and a deep commitment to your cause... We believe your energy should be focused on making a difference, not wrestling with spreadsheets...</p>
+                        <p class="mb-4"><strong>Key Benefits:</strong><br>
+                        - **More Successful Fundraising:** AI-driven donor segmentation helps you target the right audience...<br>
+                        - **Clearer Impact Reports:** Generate compelling reports that showcase your organization’s tangible results...<br>
+                        - **Efficient Volunteer Management:** Automate volunteer hour tracking and analyze contributions...</p>
+                        <p><strong>Call to Action:</strong> Ready to transform your data into demonstrable mission impact? Schedule your free demo/consultation today...</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white border border-gray-200 rounded-lg">
-                <button class="accordion-toggle flex justify-between items-center w-full p-6 text-left font-semibold text-xl">
-                    <span>Case Study: LinkedIn Social Media Post</span>
-                    <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                <div class="accordion-content p-6 pt-0">
-                    <p class="mb-6 text-gray-600"><strong>Goal:</strong> Generate a LinkedIn post for a new employee management SaaS, targeting HR leaders with a professional, insightful, and subtly persuasive tone.</p>
-                     <h4 class="font-semibold text-lg mb-2">Final Iteration (Temp 0.3) - Prompt & Analysis</h4>
+            <!-- Other tab content divs would go here, following the same structure -->
+            <div id="campaign" class="tab-content hidden">
+                 <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-4">Case Study: Social Media Campaign</h2>
+                     <p class="mb-6 text-gray-600"><strong>Goal:</strong> Generate a LinkedIn post for a new employee management SaaS, targeting HR leaders with a professional, insightful, and subtly persuasive tone.</p>
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Final Iteration: Refined Prompt (Temp: 0.3)</h3>
                     <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
                         <pre><code>You are a SOCIAL MEDIA MANAGER with 20 years of experience...
 ...subtly persuasive tone that resonates deeply with seasoned HR leaders...
 Begin by framing the core challenge... as a strategic imperative... but ensure the opening is relatable and conversational...
 Avoid corporate jargon or overly academic language...</code></pre>
                     </div>
-                    <div class="analysis-block p-4 rounded mb-4">
-                        <p><strong>Final Analysis:</strong> The prompt's success came from blending a high-experience persona with a conversational yet strategic tone. The instruction to "frame the core challenge" while remaining "relatable" was key to moving beyond generic marketing speak and producing an authentic-sounding post.</p>
+                    <div class="analysis-block p-4 rounded-lg my-4">
+                        <p><strong>Analysis:</strong> The prompt's success came from blending a high-experience persona with a conversational yet strategic tone. The instruction to "frame the core challenge" while remaining "relatable" was key to moving beyond generic marketing speak.</p>
                     </div>
-                    <h4 class="font-semibold text-lg mb-2">Final Output</h4>
-                    <div class="output-block p-4 rounded">
-                        <p class="italic">"Let's be honest, managing a modern workforce isn't just about payroll and benefits anymore. It's the cornerstone of a thriving, competitive business... Are you spending more time firefighting than strategically shaping your workforce? That's why we developed Employee.Mana..."</p>
+                     <h3 class="text-xl font-semibold mt-6 mb-2">Final Output</h3>
+                    <div class="output-block p-4 rounded-lg my-4 italic">
+                        <p class="mb-4">Let's be honest, managing a modern workforce isn't just about payroll and benefits anymore. It's the cornerstone of a thriving, competitive business. Getting talent acquisition, performance management, and employee engagement right is crucial for strategic growth – and frankly, it's often a monumental juggling act. Are you spending more time firefighting than strategically shaping your workforce?</p>
+                        <p>That's why we developed Employee.Mana. This isn't just another HR SaaS; it's a strategic partner designed to elevate your role and deliver better talent outcomes. We've streamlined the complexities of employee management, giving you the time and data-driven insights to focus on what truly matters: building a high-performing, engaged team. Ready to reclaim your time and elevate your impact? Click here to explore Employee.Mana: [www.employee.mana.com]<br><br>#HRtech #TalentManagement #EmployeeEngagement</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="landing" class="tab-content hidden">
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-4">Case Study: Landing Page Copy</h2>
+                    <p class="mb-6 text-gray-600"><strong>Goal:</strong> Detail 3 key benefits of a B2B project management SaaS product for a landing page, speaking directly to busy project managers.</p>
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Final Iteration: Refined Prompt (Temp: 0.3)</h3>
+                    <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
+                        <pre><code>Persona: You are a straightforward product marketer. You have 20 years of experience.
+...
+Tone/Style: ...cutting through noise to highlight value. Use active voice. Avoid generic marketing superlatives... Strive for elegance in brevity...
+Negative Constraints: ...Do not repeat 'project success'... Avoid sounding like an overworked intern...</code></pre>
+                    </div>
+                    <div class="analysis-block p-4 rounded-lg my-4">
+                        <p><strong>Analysis:</strong> The combination of a "straightforward" persona, directives for "elegance in brevity," and strong negative constraints (no repetition, no "intern" tone) produced concise, high-impact copy perfect for a landing page.</p>
+                    </div>
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Final Output</h3>
+                    <div class="output-block p-4 rounded-lg my-4">
+                        <p class="mb-4"><strong>Benefit 1: Gain Real-Time Visibility into Project Progress.</strong><br>See exactly where your projects stand, at any moment. Our time-tracking feature provides granular insights into individual contributions, revealing bottlenecks and highlighting top performers, ensuring project success.</p>
+                        <p class="mb-4"><strong>Benefit 2: Eliminate Time-Wasting Administrative Tasks.</strong><br>Stop chasing down status updates. Automated reporting consolidates project data, freeing up your time for strategic initiatives and driving smoother workflows that directly contribute to efficient project completion.</p>
+                        <p><strong>Benefit 3: Make Data-Driven Decisions with Confidence.</strong><br>Get the objective data you need to optimize project performance. Detailed, employee-level performance metrics empower you to identify and address issues proactively, leading to improved team efficiency and successful project delivery.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="memo" class="tab-content hidden">
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-4">Case Study: Internal HR Memo</h2>
+                     <p class="mb-6 text-gray-600"><strong>Goal:</strong> Announce a new company value, "Unified Innovation," to all employees in a way that is inspiring, clear, and encourages adoption.</p>
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Final Iteration: Refined Prompt (Temp: 0.4)</h3>
+                    <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
+                        <pre><code>Persona: You are a strategic and empathetic Head of Internal Communications with 15 years of experience... You understand how to speak in a bespoke and eloquent way.
+...
+Tone/Style: Inspirational, transparent, unifying, and professional yet genuinely approachable... Strive for elegance in brevity...
+Negative Constraints: ...Do not sound like a out-of-touch office drone... Avoid common corporate jargon... Do not merely inform; aim to genuinely move employees...</code></pre>
+                    </div>
+                    <div class="analysis-block p-4 rounded-lg my-4">
+                        <p><strong>Analysis:</strong> This prompt succeeded by defining a highly specific, senior-level persona ("Head of Internal Communications," "eloquent") and focusing on the *emotional goal* ("genuinely move employees") rather than just the informational one. This pushed the AI beyond generic corporate language.</p>
+                    </div>
+                     <h3 class="text-xl font-semibold mt-6 mb-2">Final Output</h3>
+                    <div class="output-block p-4 rounded-lg my-4">
+                        <p class="font-bold mb-2">Subject: A New Chapter in How We Create Together: Introducing Unified Innovation</p>
+                        <p>Hi Team,</p>
+                        <p class="my-4">Today, we formally introduce a value that many of you already practice: **Unified Innovation**. This isn't just a new phrase, but a recognition of the simple truth that our best ideas come to life when we build them together. It’s our commitment to making collaborative creativity the cornerstone of our work.</p>
+                        <p class="my-4">In practice, this means creating more opportunities for your expertise to shine across teams. Think of the last project that felt truly seamless—where marketing insights helped shape an engineering solution, or customer feedback directly inspired a new feature. That is the spirit we are capturing. It’s about merging our diverse talents not just to be more efficient, but to make our work more impactful and rewarding for everyone involved.</p>
+                        <p class="my-4">Let's make this value a visible part of our culture. I encourage you to reach across aisles, share your perspective freely, and listen with the intent to build on the ideas of others. Together, let’s make our collective genius our greatest asset.</p>
+                        <p>Best,</p>
+                        <p>HR Team</p>
                     </div>
                 </div>
             </div>
 
+            <div id="chatbot" class="tab-content hidden">
+                 <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-4">Case Study: Customer Service Chatbot</h2>
+                    <p class="mb-6 text-gray-600"><strong>Goal:</strong> Answer a common customer question ("how do I update my billing info?") in a way that is friendly, clear, reassuring, and not robotic.</p>
+                    <h3 class="text-xl font-semibold mt-6 mb-2">Final Iteration: Refined Prompt (Temp: 0.3)</h3>
+                    <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
+                        <pre><code>Persona: You are a helpful and genuinely friendly customer service representative... known for your clear, supportive, and reassuring communication.
+...
+Tone/Style: Use a warm, clear, and very reassuring tone. Aim for language that feels like a natural, helpful conversation...
+Negative Constraints: ...Do not use exclamation points (they can sometimes feel forced). Do not be overly friendly.</code></pre>
+                    </div>
+                    <div class="analysis-block p-4 rounded-lg my-4">
+                        <p><strong>Analysis:</strong> The key to success here was the negative constraint: "Do not use exclamation points." This is a subtle but powerful instruction that forces the AI to convey friendliness through word choice alone, resulting in a more natural and less forced tone than the initial attempt.</p>
+                    </div>
+                     <h3 class="text-xl font-semibold mt-6 mb-2">Final Output</h3>
+                    <div class="output-block p-4 rounded-lg my-4 italic">
+                        <p>Hi there! Updating your billing information is easy; you'll find the billing section within your account settings, usually under your profile. The whole process is simple and secure, so you can update your details with confidence.</p>
+                    </div>
+                </div>
             </div>
+
+        </div>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white mt-16">
         <div class="container mx-auto px-6 py-8 text-center">
             <p>&copy; 2024 HSG Portfolio. All Rights Reserved.</p>
         </div>
     </footer>
-    
+
     <script>
-        document.querySelectorAll('.accordion-toggle').forEach(button => {
-            button.addEventListener('click', () => {
-                const accordionContent = button.nextElementSibling;
-                const accordionIcon = button.querySelector('svg');
+        function openTab(event, tabName) {
+            // Get all elements with class="tab-content" and hide them
+            const tabcontent = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
 
-                button.classList.toggle('bg-indigo-50');
+            // Get all elements with class="tab-button" and remove the "tab-active" class
+            const tabbuttons = document.getElementsByClassName("tab-button");
+            for (let i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" tab-active", "");
+            }
 
-                if (accordionContent.style.maxHeight) {
-                    accordionContent.style.maxHeight = null;
-                    accordionIcon.style.transform = 'rotate(0deg)';
-                } else {
-                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                    accordionIcon.style.transform = 'rotate(180deg)';
-                } 
-            });
-        });
+            // Show the current tab, and add an "tab-active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " tab-active";
+        }
     </script>
 
 </body>
