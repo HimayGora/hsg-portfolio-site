@@ -3,21 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompt Engineering | HSG Portfolio</title>
+    <title>Prompt Engineering Case Study | HSG Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .code-block { background-color: #1f2937; color: #e2e8f0; }
+        .code-block { 
+            background-color: #1f2937; 
+            color: #e2e8f0; 
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .output-block { 
+            background-color: #f3f4f6; 
+            border-left: 4px solid #4f46e5; 
+            color: #1f2937;
+        }
+        .analysis-block { 
+            background-color: #fffbeb; 
+            border-left: 4px solid #f59e0b; 
+            color: #713f12;
+        }
         .dark .code-block { background-color: #1e293b; color: #cbd5e1; }
+        .dark .output-block { 
+            background-color: #374151; 
+            border-left-color: #6366f1;
+            color: #e2e8f0;
+        }
+        .dark .analysis-block { 
+            background-color: #4b5563; 
+            border-left-color: #fbbf24;
+            color: #fef3c7;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-gray-200 transition-colors duration-300">
 
+    <!-- Header and Navigation -->
     <header class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-xl font-bold text-gray-800 dark:text-white">HSG</a>
-            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="automation.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Workflow Automation</a>
+                <a href="prompt-engineering.html" class="text-indigo-600 dark:text-amber-400 font-semibold">Prompt Engineering</a>
+                <a href="other_prompts.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Showcase</a>
+                <a href="certs.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Certifications</a>
+                <a href="skills.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Skills</a>
+                <a href="contact.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Contact</a>
+            </div>
             <div class="md:hidden">
                 <input type="checkbox" id="menu-toggle" class="hidden peer">
                 <label for="menu-toggle" class="cursor-pointer">
@@ -26,20 +58,11 @@
                 <div class="hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-800 shadow-lg peer-checked:block">
                     <a href="automation.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Workflow Automation</a>
                     <a href="prompt-engineering.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-amber-400 font-semibold">Prompt Engineering</a>
-                    <a href="other_prompts.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Other Prompts</a>
+                    <a href="other_prompts.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Showcase</a>
                     <a href="certs.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Certifications</a>
                     <a href="skills.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Skills</a>
                     <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-50 dark:hover:bg-slate-700">Contact</a>
                 </div>
-            </div>
-
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="automation.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Workflow Automation</a>
-                <a href="prompt-engineering.html" class="text-indigo-600 dark:text-amber-400 font-semibold">Prompt Engineering</a>
-                <a href="other_prompts.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Other Prompts</a>
-                <a href="certs.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Certifications</a>
-                <a href="skills.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Skills</a>
-                <a href="contact.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Contact</a>
             </div>
         </nav>
     </header>
@@ -47,30 +70,126 @@
     <main class="container mx-auto px-6 py-16">
         <div class="bg-white dark:bg-slate-800 p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto">
             <article class="prose lg:prose-xl max-w-none dark:prose-invert">
-                <h1 class="text-4xl font-bold mb-2 text-gray-900 dark:text-white">Process: Iterative Prompt Engineering</h1>
-                <p class="text-lg text-gray-500 dark:text-slate-400 mb-8">Refining AI instructions to achieve a specific, high-quality output.</p>
+                <h1 class="text-4xl font-bold mb-2 text-gray-900 dark:text-white">Case Study: Iterative Prompt Engineering</h1>
+                <p class="text-lg text-gray-500 dark:text-slate-400 mb-8">Refining AI instructions to generate a high-quality blog post introduction.</p>
                 
                 <section>
                     <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">The Goal</h2>
-                    <p>The objective was to create a prompt that could generate a three-paragraph blog post introduction for a SaaS company. The target audience was small business owners hesitant about AI, requiring an enthusiastic, informative, and reassuring tone while avoiding robotic language.</p>
+                    <p>The objective was to create a prompt that generates a three-paragraph blog post introduction for a SaaS company. The target audience was small business owners hesitant about AI, requiring an enthusiastic, informative, and reassuring tone while avoiding robotic language.</p>
                 </section>
 
+                <div class="mt-12 border-t dark:border-slate-700 pt-6">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">The Process</h2>
+                </div>
+
+                <!-- Iteration 1 -->
                 <section>
-                    <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">The Final Prompt</h2>
+                    <h3 class="text-xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Iteration 1: The Initial Prompt (Temp: 0.1)</h3>
                     <div class="code-block p-6 rounded-lg my-6 overflow-x-auto">
-                        <pre><code class="language-markdown">You are a marketing expert writing for a SaaS company blog...</code></pre>
+                        <pre><code>You are a marketing expert writing for a SaaS company blog.
+Write a 3-paragraph, engaging blog post introduction about "The Future of AI in Content Creation."
+Target audience: Small business owners who might be hesitant about AI.
+Tone: Enthusiastic, informative, inspiring, and reassuring.
+Include keywords like "efficiency," "scalability," and "democratizing content."
+Avoid sounding robotic. Write 100-150 words.
+End with a clear hook encouraging them to read more about integrating AI.</code></pre>
+                    </div>
+                    <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-300">Resulting Output:</h4>
+                    <div class="output-block p-6 rounded-lg my-4 italic">
+                        <p>Forget the robots taking over! The future of content creation isn't about replacing human creativity, it's about supercharging it. AI is no longer a futuristic fantasy; it's a powerful tool readily available to help your small business thrive. Imagine effortlessly boosting your content output, achieving incredible efficiency gains, and finally tackling that overwhelming content backlog.</p>
+                    </div>
+                    <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-300">Analysis:</h4>
+                    <div class="analysis-block p-4 rounded-lg my-4">
+                        <p>At a low temperature, the output sounds far too much like generic AI content. A reader would likely dismiss it as a no-effort blog post. It lacks a compelling hook and fails to invoke a genuine response.</p>
+                    </div>
+                </section>
+
+                <!-- Iteration 2 -->
+                <section>
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-gray-900 dark:text-white border-t dark:border-slate-600 pt-8">Iteration 2: Adding Structural Constraints (Temp: 0.2)</h3>
+                    <div class="code-block p-6 rounded-lg my-6 overflow-x-auto">
+                        <pre><code>...
+Each paragraph should be concise, containing 3-4 sentences, and clearly separated by paragraph breaks.
+...
+Write at most 300 words.</code></pre>
+                    </div>
+                    <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-300">Resulting Output:</h4>
+                    <div class="output-block p-6 rounded-lg my-4 italic">
+                        <p>Running a small business is tough, juggling a million tasks while wearing every hat imaginable. But what if you could gain a significant edge, boosting efficiency and freeing up your time to focus on what truly matters – growing your business? That's the power of AI, and it's no longer a futuristic fantasy; it's a practical tool readily available to help you thrive.</p>
+                        <p class="mt-4">We understand that the idea of integrating AI might seem daunting... Modern AI solutions are designed for user-friendliness and scalability, offering powerful capabilities without the steep learning curve.</p>
+                    </div>
+                    <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-300">Analysis:</h4>
+                    <div class="analysis-block p-4 rounded-lg my-4">
+                        <p>Adding specific structural rules (paragraph and sentence counts) and slightly increasing the temperature gave the AI more freedom in word choice and placement. The output is better structured, but the tone is still not quite right.</p>
+                    </div>
+                </section>
+                
+                <!-- Iteration 3 -->
+                <section>
+                    <h3 class="text-xl font-semibold mt-12 mb-4 text-gray-900 dark:text-white border-t dark:border-slate-600 pt-8">Iteration 3: Refining the Persona and Tone (Temp: 0.3)</h3>
+                    <div class="code-block p-6 rounded-lg my-6 overflow-x-auto">
+                        <pre><code>...
+Do not be overly formal, overly friendly, stay strictly professional.
+Use common SaaS acronyms without spelling out what they mean.
+Write this as if you're explaining this to a colleague over coffee.
+Vary sentence length, but lean towards conciseness.
+...</code></pre>
+                    </div>
+                    <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-300">Resulting Output:</h4>
+                    <div class="output-block p-6 rounded-lg my-4 italic">
+                         <p>Running a small business is tough. You're juggling a million things, and time is your most valuable asset. That's where AI-powered SaaS solutions step in, offering incredible boosts in efficiency and scalability you might not even realize are possible. Forget the sci-fi robots; this is about smart tools designed to make your life easier.</p>
+                    </div>
+                    <h4 class="font-semibold text-lg text-gray-800 dark:text-gray-300">Analysis:</h4>
+                    <div class="analysis-block p-4 rounded-lg my-4">
+                        <p>This was a significant improvement. Adding the "business casual" context of explaining something to a colleague over coffee led to a much more natural and less formal tone. The AI avoided overly stiff language, making the content feel more authentic and less like it was AI-generated.</p>
+                    </div>
+                </section>
+
+                <!-- Final Iteration -->
+                <section>
+                    <h2 class="text-2xl font-semibold mt-12 mb-4 text-gray-900 dark:text-white border-t-2 dark:border-amber-500 pt-8">The Final Prompt (Temp: 1.0)</h2>
+                    <p>The final prompt combines all previous constraints with a high temperature. Usually, a temp of 1.0 can lead to chaotic or nonsensical output. However, because the prompt is now so well-constrained with a clear persona, structure, and negative constraints, the high temperature simply allows for maximum creativity and natural language variation within those safe boundaries.</p>
+                    <div class="code-block p-6 rounded-lg my-6 overflow-x-auto">
+                        <pre><code>You are a marketing expert writing for a SaaS company blog.
+
+Generate a 3-paragraph blog post introduction.
+
+Each paragraph should be concise, containing 3-4 sentences, and clearly separated by paragraph breaks.
+
+Target audience: Small business owners who might be hesitant about AI.
+
+Tone: Enthusiastic, informative, inspiring, and reassuring.
+
+Include keywords like "efficiency," "scalability," and "democratizing content."
+
+Avoid sounding robotic.
+
+End with a clear hook encouraging them to read more about integrating AI.
+
+Do not be overly formal, overly friendly, stay strictly professional.
+
+Use common SaaS acronyms without spelling out what they mean.
+
+Write this as if you're explaining this to a colleague over coffee.
+
+Maintain a consistently natural, engaging, and highly professional voice.
+
+Vary sentence length, but lean towards conciseness.
+
+Write at most 300 words.</code></pre>
                     </div>
                 </section>
 
                 <section>
-                    <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Resulting Output (at Temperature 1.0)</h2>
-                    <p>This well-constructed prompt allowed for a high temperature setting without sacrificing coherence, resulting in a natural and engaging tone.</p>
-                    <div class="bg-gray-100 dark:bg-slate-700 border-l-4 border-indigo-500 dark:border-amber-500 p-6 rounded-r-lg my-6 italic">
-                        <p class="mb-4">Running a small business is tough. You're juggling a million things, and often feel like you're drowning in tasks... Artificial intelligence is no longer a futuristic fantasy; it's a practical tool readily available to help you thrive.</p>
-                        <p class="mb-4">We understand that adopting new technologies like AI can feel daunting... modern AI solutions... are designed with user-friendliness in mind. They're built to empower you, not overwhelm you.</p>
-                        <p>Think about the possibilities... AI is democratizing content creation and business intelligence... Ready to discover how you can leverage AI for explosive growth? Let's dive in.</p>
+                    <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Final Resulting Output</h2>
+                    <p>This final version is a success. The tone is engaging, the structure is clear, and the message is both reassuring and inspiring, perfectly matching the initial goal.</p>
+                    <div class="output-block p-6 rounded-lg my-6 italic border-indigo-600 dark:border-amber-500 border-l-8">
+                        <p class="mb-4">Running a small business is tough. You're juggling a million things, and often feel like you're drowning in tasks. But what if I told you there's a way to boost efficiency and scalability without adding to your already overflowing to-do list? Artificial intelligence is no longer a futuristic fantasy; it's a practical tool readily available to help you thrive.</p>
+                        <p class="mb-4">We understand that adopting new technologies like AI can feel daunting. Many small business owners worry about the complexity and cost. However, the reality is that modern AI solutions, particularly SaaS offerings, are designed with user-friendliness in mind. They're built to empower you, not overwhelm you.</p>
+                        <p>Think about the possibilities: Imagine effortlessly generating high-quality marketing materials, automating repetitive tasks, and gaining invaluable data-driven insights, all while significantly reducing your workload. AI is democratizing content creation and business intelligence, putting powerful tools in the hands of everyone. Ready to discover how you can leverage AI for explosive growth? Let's dive in.</p>
                     </div>
                 </section>
+
                 <div class="mt-12 border-t dark:border-slate-700 pt-6">
                      <a href="index.html" class="text-indigo-600 dark:text-amber-400 hover:underline">← Back to Home</a>
                 </div>
@@ -78,10 +197,22 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 dark:bg-slate-800/50 mt-16">
         <div class="container mx-auto px-6 py-8 text-center text-white">
             <p>&copy; 2024 HSG Portfolio. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+         // Set initial theme based on system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
+        }
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            document.body.classList.toggle('dark', e.matches);
+        });
+    </script>
 </body>
 </html>

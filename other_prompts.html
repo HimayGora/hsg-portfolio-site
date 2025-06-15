@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompt Engineering Case Studies | HSG Portfolio</title>
+    <title>Prompt Engineering Showcase | HSG Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .code-block { background-color: #1f2937; color: #f3f4f6; font-family: 'Courier New', Courier, monospace; }
-        
-        /* Light mode styles */
-        .output-block { background-color: #f3f4f6; border-left: 4px solid #4f46e5; }
-        .analysis-block { background-color: #fffbeb; border-left: 4px solid #f59e0b; }
-        .tab-active { 
-            border-color: #4f46e5;
-            color: #4f46e5;
+        .code-block { 
+            background-color: #1f2937; 
+            color: #f3f4f6; 
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .output-block { 
+            background-color: #f3f4f6; 
+            border-left: 4px solid #4f46e5; 
+        }
+        .analysis-block { 
+            background-color: #fffbeb; 
+            border-left: 4px solid #f59e0b; 
         }
 
         /* Dark mode styles */
-        .dark .output-block { background-color: #374151; border-left-color: #f59e0b; }
-        .dark .analysis-block { background-color: #4b5563; border-left-color: #fbbf24; }
-        .dark .tab-active {
-            border-color: #f59e0b;
-            color: #f59e0b;
+        .dark .output-block { 
+            background-color: #374151; 
+            border-left-color: #f59e0b; 
         }
-        .dark .tab-button {
-            border-color: transparent;
+        .dark .analysis-block { 
+            background-color: #4b5563; 
+            border-left-color: #fbbf24; 
         }
-
-        .tab-content { display: none; }
-        #blog { display: block; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-gray-200 transition-colors duration-300">
@@ -41,7 +41,7 @@
             <div class="hidden md:flex items-center space-x-6">
                 <a href="automation.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Workflow Automation</a>
                 <a href="prompt-engineering.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Prompt Engineering</a>
-                <a href="other_prompts.html" class="text-indigo-600 dark:text-amber-400 font-semibold">Other Prompts</a>
+                <a href="other_prompts.html" class="text-indigo-600 dark:text-amber-400 font-semibold">Showcase</a>
                 <a href="certs.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Certifications</a>
                 <a href="skills.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Skills</a>
                 <a href="contact.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Contact</a>
@@ -54,7 +54,7 @@
                 <div class="hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-800 shadow-lg peer-checked:block">
                     <a href="automation.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Workflow Automation</a>
                     <a href="prompt-engineering.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Prompt Engineering</a>
-                    <a href="other_prompts.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-amber-400 font-semibold">Other Prompts</a>
+                    <a href="other_prompts.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-amber-400 font-semibold">Showcase</a>
                     <a href="certs.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Certifications</a>
                     <a href="skills.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Skills</a>
                     <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-50 dark:hover:bg-slate-700">Contact</a>
@@ -67,75 +67,121 @@
         <div class="text-center">
             <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-gray-900 dark:text-white">Prompt Engineering Showcase</h1>
             <p class="text-lg text-gray-600 dark:text-slate-400 max-w-3xl mx-auto">
-                A collection of case studies demonstrating the iterative process of refining AI prompts. Each example shows the evolution from an initial idea to a high-quality, specific, and reliable output.
+                A collection of case studies demonstrating refined AI prompts for diverse business applications. Each example includes the final prompt, an analysis of its structure, and the resulting high-quality output.
             </p>
         </div>
 
-        <div class="mt-12">
-            <!-- Tab Buttons -->
-            <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
-                <button class="tab-button tab-active px-4 py-2 font-semibold border-b-2" onclick="openTab(event, 'blog')">Blog Intro</button>
-                <button class="tab-button px-4 py-2 font-semibold border-b-2 border-transparent text-gray-500 dark:text-gray-400" onclick="openTab(event, 'sales')">Sales Page</button>
-                <button class="tab-button px-4 py-2 font-semibold border-b-2 border-transparent text-gray-500 dark:text-gray-400" onclick="openTab(event, 'campaign')">Social Media</button>
-            </div>
+        <div class="mt-16 space-y-16 max-w-4xl mx-auto">
+            
+            <!-- Case Study 1: B2B Sales Page -->
+            <section class="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Case Study: B2B SaaS Sales Page</h2>
+                <p class="mb-6 text-gray-600 dark:text-slate-400"><strong>Goal:</strong> Generate long-form sales copy for "ImpactMetrics AI," an analytics platform designed for non-profits, to drive demo sign-ups.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">The Final Prompt</h3>
+                <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
+                    <pre class="whitespace-pre-wrap"><code>Persona: You are a highly empathetic and results-driven B2B SaaS marketing copywriter with 15 years of experience... Your goal is to inspire and empower. You should try to write this as if you are talking to a prospect over lunch, business casual this is still a sales page.
 
-            <!-- Tab Content -->
-            <div id="blog" class="tab-content">
-                <div class="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Case Study: Blog Post Introduction</h2>
-                    <p class="mb-6 text-gray-600 dark:text-slate-400"><strong>Goal:</strong> Generate a 3-paragraph blog post intro for a SaaS company, targeting small business owners hesitant about AI.</p>
-                    
-                    <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">Final Iteration: Refined Prompt</h3>
-                    <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
-                        <pre><code>You are a marketing expert writing for a SaaS company blog...</code></pre>
-                    </div>
-                    <div class="analysis-block p-4 rounded-lg my-4">
-                        <p><strong>Analysis:</strong> By adding specific persona constraints ("explaining to a colleague") and increasing temperature for creativity, the prompt was well-constrained enough to prevent nonsensical output while allowing for a more natural, engaging voice.</p>
-                    </div>
-                    <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">Final Output</h3>
-                    <div class="output-block p-4 rounded-lg my-4 italic">
-                        <p class="mb-4">Running a small business is tough... But what if I told you there's a way to boost efficiency and scalability without adding to your already overflowing to-do list? ...</p>
-                    </div>
+Goal: Generate compelling, long-form sales page copy...
+
+Topic/Context: Our new product is "ImpactMetrics AI," an AI-powered analytics platform...
+
+Format/Structure: [Detailed structure including Headline, Intro, Problem, Solution, Benefits, CTA]
+
+Tone/Style: Empathetic, empowering, professional yet approachable, hopeful, and results-oriented...
+
+Negative Constraints: Do not sound robotic. Do not sound like an intern. Do not overuse corporate jargon. It is not a conversation this is a sales page. DO not ask normal conversational questions or statements.</code></pre>
                 </div>
-            </div>
-
-            <div id="sales" class="tab-content">
-                <div class="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Case Study: B2B SaaS Sales Page</h2>
-                    <p class="mb-6 text-gray-600 dark:text-slate-400"><strong>Goal:</strong> Generate long-form sales copy for "ImpactMetrics AI," an analytics platform for non-profits.</p>
-                    
-                    <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">Final Iteration: Refined Prompt</h3>
-                    <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
-                        <pre><code>Persona: You are a highly empathetic and results-driven B2B SaaS marketing copywriter...</code></pre>
-                    </div>
-                     <div class="analysis-block p-4 rounded-lg my-4">
-                        <p><strong>Analysis:</strong> The final prompt succeeded by layering a deep persona with highly specific negative constraints. Explicitly stating "this is a sales page, not a conversation" guided the AI to the correct balance.</p>
-                    </div>
-
-                    <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">Final Output</h3>
-                    <div class="output-block p-4 rounded-lg my-4">
-                        <p class="font-bold">Headline: Amplify Your Mission: AI for Non-Profit Impact</p>
-                    </div>
+                <div class="analysis-block p-4 rounded-lg my-4">
+                    <p><strong>Analysis:</strong> This prompt's success lies in its highly-detailed persona and explicit negative constraints. Directives like "this is still a sales page" and "it is not a conversation" were critical in preventing the AI from adopting a conversational style while still maintaining a business-casual, empathetic tone perfect for the non-profit sector.</p>
                 </div>
-            </div>
-
-            <div id="campaign" class="tab-content">
-                 <div class="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Case Study: Social Media Campaign</h2>
-                     <p class="mb-6 text-gray-600 dark:text-slate-400"><strong>Goal:</strong> Generate a LinkedIn post for a new employee management SaaS.</p>
-                    <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">Final Iteration: Refined Prompt</h3>
-                    <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
-                        <pre><code>You are a SOCIAL MEDIA MANAGER with 20 years of experience...</code></pre>
-                    </div>
-                    <div class="analysis-block p-4 rounded-lg my-4">
-                        <p><strong>Analysis:</strong> The prompt's success came from blending a high-experience persona with a conversational yet strategic tone to move beyond generic marketing speak.</p>
-                    </div>
-                     <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">Final Output</h3>
-                    <div class="output-block p-4 rounded-lg my-4 italic">
-                        <p class="mb-4">Let's be honest, managing a modern workforce isn't just about payroll and benefits anymore...</p>
-                    </div>
+                <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">Final Output</h3>
+                <div class="output-block p-4 rounded-lg my-4">
+                    <p class="font-bold text-lg">Headline: Amplify Your Mission: AI for Non-Profit Impact</p>
+                    <p class="mt-2"><strong>Sub-Headline:</strong> ImpactMetrics AI: Turn data into demonstrable results, effortlessly.</p>
+                    <p class="mt-4 italic">Running a non-profit is a labor of love... But amidst the tireless dedication, you're likely juggling limited resources, stretched staff, and the constant pressure to prove your impact. We understand. At ImpactMetrics AI, we believe your energy should be focused on making a difference, not wrestling with spreadsheets...</p>
                 </div>
-            </div>
+            </section>
+
+            <!-- Case Study 2: Social Media Campaign -->
+            <section class="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Case Study: Social Media Campaign</h2>
+                <p class="mb-6 text-gray-600 dark:text-slate-400"><strong>Goal:</strong> Generate an insightful and persuasive LinkedIn post for a new employee management SaaS, targeting HR leaders and C-suite executives.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">The Final Prompt</h3>
+                <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
+                    <pre class="whitespace-pre-wrap"><code>Persona: You are a SOCIAL MEDIA MANAGER with 20 years of experience... Your posts convey deep understanding of industry challenges and offer strategic solutions.
+
+Goal: Generate a LinkedIn post... drive clicks to the product page... Make the call to action snappy and engaging.
+
+Format/Structure: Write 2 paragraphs of 3-4 sentences each.
+
+Tone/Style: Confident, authoritative, and solutions-oriented voice that is both insightful and approachable.
+
+Negative Constraints: Do not sound like a robot, a fresh intern, or overtly salesy... Avoid corporate jargon or overly academic language...</code></pre>
+                </div>
+                <div class="analysis-block p-4 rounded-lg my-4">
+                    <p><strong>Analysis:</strong> The key here was blending a high-experience persona ("20 years") with specific instructions on tone ("insightful and approachable") and framing ("Begin by framing the core challenge... as a strategic imperative"). This moved the AI beyond generic marketing speak to create a post that resonates with a senior professional audience.</p>
+                </div>
+                <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">Final Output</h3>
+                <div class="output-block p-4 rounded-lg my-4 italic">
+                    <p>Let's be honest, managing a modern workforce isn't just about payroll and benefits anymore. It's the cornerstone of a thriving, competitive business. Getting talent acquisition, performance management, and employee engagement right is crucial for strategic growth – and frankly, it's often a monumental juggling act...</p>
+                    <p class="mt-4">That's why we developed Employee.Mana. This isn't just another HR SaaS; it's a strategic partner designed to elevate your role and deliver better talent outcomes...</p>
+                </div>
+            </section>
+
+             <!-- Case Study 3: Internal HR Memo -->
+            <section class="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Case Study: Internal HR Memo</h2>
+                <p class="mb-6 text-gray-600 dark:text-slate-400"><strong>Goal:</strong> Draft an inspiring, human-centered email to all employees announcing a new company value ("Unified Innovation").</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">The Final Prompt</h3>
+                <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
+                    <pre class="whitespace-pre-wrap"><code>Persona: You are a strategic and empathetic Head of Internal Communications with 15 years of experience... You understand how to connect with employees on a personal level... speak in a bespoke and eloquent way.
+
+Goal: Draft an email announcement... inspiring employees to embody it.
+
+Tone/Style: Inspirational, transparent, unifying, and professional yet genuinely approachable... Strive for elegance in brevity...
+
+Negative Constraints: Do not sound robotic. Do not sound like an out-of-touch office drone... Avoid common corporate jargon... Do not merely inform; aim to genuinely move employees...</code></pre>
+                </div>
+                <div class="analysis-block p-4 rounded-lg my-4">
+                    <p><strong>Analysis:</strong> This prompt's strength is its focus on emotional impact. Phrases like "genuinely move employees," "human-centered messaging," and "elegance in brevity" guided the AI to produce a memo that feels authentic and inspiring, avoiding the typical pitfalls of dry, corporate communication.</p>
+                </div>
+                <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">Final Output</h3>
+                <div class="output-block p-4 rounded-lg my-4 italic">
+                    <p class="font-bold">Subject: Embracing "Unified Innovation" – A New Chapter for Us</p>
+                    <p class="mt-2">Hi team,</p>
+                    <p class="mt-2">Get ready for an exciting evolution in how we work together! We're thrilled to introduce our newest core value: "Unified Innovation." This isn't just a buzzword; it's the compass guiding us towards even greater achievements...</p>
+                </div>
+            </section>
+
+            <!-- Case Study 4: Customer Service Chatbot -->
+            <section class="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-2 text-gray-900 dark:text-white">Case Study: Customer Service Chatbot</h2>
+                <p class="mb-6 text-gray-600 dark:text-slate-400"><strong>Goal:</strong> Generate a clear, concise, and reassuring chatbot response to a customer asking how to update their billing information.</p>
+                
+                <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">The Final Prompt</h3>
+                <div class="code-block p-4 rounded-lg my-4 overflow-x-auto">
+                    <pre class="whitespace-pre-wrap"><code>Persona: You are a helpful and genuinely friendly customer service representative... known for your clear, supportive, and reassuring communication.
+
+Goal: ...answer a common customer question clearly and efficiently, making the customer feel understood and confident.
+
+Format/Structure: Write a short, single paragraph response, no more than 3 sentences.
+
+Tone/Style: Use a warm, clear, and very reassuring tone. Aim for language that feels like a natural, helpful conversation, not a script.
+
+Negative Constraints: Do not use technical jargon or sound robotic... Avoid asking for sensitive personal information... Do not use exclamation points... Do not be overly friendly.</code></pre>
+                </div>
+                <div class="analysis-block p-4 rounded-lg my-4">
+                    <p><strong>Analysis:</strong> This prompt demonstrates precision in microcopy. The negative constraints are key: "Do not use exclamation points" and "Do not be overly friendly" prevent the AI from generating a response that feels forced or saccharine. The result is a perfectly balanced tone: helpful and warm, yet professional and direct.</p>
+                </div>
+                <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-900 dark:text-white">Final Output</h3>
+                <div class="output-block p-4 rounded-lg my-4 italic">
+                    <p>Hi there! Updating your billing information is easy; you'll find the billing section within your account settings, usually under your profile. The whole process is simple and secure, so you can update your details with confidence.</p>
+                </div>
+            </section>
+
         </div>
     </main>
 
@@ -146,33 +192,14 @@
     </footer>
 
     <script>
-        function openTab(event, tabName) {
-            const tabcontent = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            const tabbuttons = document.getElementsByClassName("tab-button");
-            for (let i = 0; i < tabbuttons.length; i++) {
-                tabbuttons[i].classList.remove("tab-active");
-            }
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.classList.add("tab-active");
-            
-            // Add/remove dark class from body for this page's specific styles
-            document.body.classList.toggle('dark', window.matchMedia('(prefers-color-scheme: dark)').matches);
+        // Set initial theme based on system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark');
         }
-        
-        // Initial setup
-        openTab({ currentTarget: document.querySelector('.tab-button') }, 'blog');
-        
         // Listen for system theme changes
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
             document.body.classList.toggle('dark', e.matches);
         });
-
-        // Set initial state
-        document.body.classList.toggle('dark', window.matchMedia('(prefers-color-scheme: dark)').matches);
-
     </script>
 </body>
 </html>
