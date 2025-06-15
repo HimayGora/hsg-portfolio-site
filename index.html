@@ -4,47 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HSG Portfolio | AI & Automation</title>
+    <!-- Tailwind CSS script enables the use of utility classes -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <style>
+        /* Define CSS custom properties (variables) for the gradient colors. */
+        :root {
+            --gradient-start-color: #4F46E5; /* Default: Indigo */
+            --gradient-end-color: #9333EA;   /* Default: Purple */
+        }
+
+        /* Use a media query to detect if the user has a system-wide dark mode preference. */
+        @media (prefers-color-scheme: dark) {
+            /* If dark mode is preferred, override the CSS variables to the dark theme colors. */
+            :root {
+                --gradient-start-color: #F59E0B; /* Dark Mode: Amber */
+                --gradient-end-color: #FBBF24;   /* Dark Mode: Yellow */
+            }
+        }
+
         body {
             font-family: 'Inter', sans-serif;
         }
+
+        /* The gradient-text class now uses the CSS variables. */
         .gradient-text {
-            background: -webkit-linear-gradient(#4F46E5, #9333EA);
+            background: -webkit-linear-gradient(var(--gradient-start-color), var(--gradient-end-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<!-- Add dark mode classes to the body for background and text color changes. -->
+<body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-gray-200 transition-colors duration-300">
 
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold text-gray-800">HSG</a>
+            <a href="index.html" class="text-xl font-bold text-gray-800 dark:text-white">HSG</a>
             
             <div class="md:hidden">
                 <input type="checkbox" id="menu-toggle" class="hidden peer">
                 <label for="menu-toggle" class="cursor-pointer">
-                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                     <svg class="w-6 h-6 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </label>
-                <div class="hidden absolute top-16 left-0 w-full bg-white shadow-lg peer-checked:block">
-                    <a href="automation.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Workflow Automation</a>
-                    <a href="prompt-engineering.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Prompt Engineering</a>
-                    <a href="other_prompts.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Other Prompts</a>
-                    <a href="certs.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Certifications</a>
-                    <a href="skills.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Skills</a>
-                    <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-50">Contact</a>
+                <div class="hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-800 shadow-lg peer-checked:block">
+                    <a href="automation.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Workflow Automation</a>
+                    <a href="prompt-engineering.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Prompt Engineering</a>
+                    <a href="other_prompts.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Other Prompts</a>
+                    <a href="certs.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Certifications</a>
+                    <a href="skills.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Skills</a>
+                    <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-50 dark:hover:bg-slate-700">Contact</a>
                 </div>
             </div>
 
             <div class="hidden md:flex items-center space-x-6">
-                <a href="automation.html" class="hover:text-indigo-600">Workflow Automation</a>
-                <a href="prompt-engineering.html" class="hover:text-indigo-600">Prompt Engineering</a>
-                <a href="other_prompts.html" class="hover:text-indigo-600">Other Prompts</a>
-                <a href="certs.html" class="hover:text-indigo-600">Certifications</a>
-                <a href="skills.html" class="hover:text-indigo-600">Skills</a>
-                <a href="contact.html" class="hover:text-indigo-600">Contact</a>
+                <a href="automation.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Workflow Automation</a>
+                <a href="prompt-engineering.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Prompt Engineering</a>
+                <a href="other_prompts.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Other Prompts</a>
+                <a href="certs.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Certifications</a>
+                <a href="skills.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Skills</a>
+                <a href="contact.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Contact</a>
             </div>
         </nav>
     </header>
@@ -52,39 +71,39 @@
     <main class="container mx-auto px-6 py-16">
         
         <section class="text-center py-16">
-            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4">
+            <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4 text-gray-900 dark:text-white">
                 Designing <span class="gradient-text">Efficient Systems</span>
             </h1>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p class="text-lg text-gray-600 dark:text-slate-400 max-w-2xl mx-auto">
                 I specialize in analyzing processes and implementing AI-driven automations to dramatically increase efficiency and generate measurable results. From marketing workflows to complex technical challenges, I find ways to make things work better.
             </p>
         </section>
 
         <section id="projects" class="py-16">
-            <h2 class="text-3xl font-bold text-center mb-12">Case Studies & Projects</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Case Studies & Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <a href="automation.html" class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden group">
+                <a href="automation.html" class="block bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-amber-500/10 transition-shadow duration-300 overflow-hidden group">
                     <div class="p-8">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900">AI-Powered Email Automation</h3>
-                        <p class="text-gray-600 mb-4">A case study on developing a system that reduced manual email drafting time from 50 minutes down to just 5, achieving a 66% increase in labor efficiency.</p>
-                        <span class="font-semibold text-indigo-600 group-hover:underline">View Case Study →</span>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">AI-Powered Email Automation</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-4">A case study on developing a system that reduced manual email drafting time from 50 minutes down to just 5, achieving a 66% increase in labor efficiency.</p>
+                        <span class="font-semibold text-indigo-600 dark:text-amber-500 group-hover:underline">View Case Study →</span>
                     </div>
                 </a>
 
-                <a href="prompt-engineering.html" class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden group">
+                <a href="prompt-engineering.html" class="block bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-amber-500/10 transition-shadow duration-300 overflow-hidden group">
                     <div class="p-8">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Iterative Prompt Engineering</h3>
-                        <p class="text-gray-600 mb-4">An exploration of the iterative process used to refine prompts for Large Language Models, transforming robotic outputs into professional, human-like marketing copy.</p>
-                        <span class="font-semibold text-indigo-600 group-hover:underline">Explore Process →</span>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Iterative Prompt Engineering</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-4">An exploration of the iterative process used to refine prompts for Large Language Models, transforming robotic outputs into professional, human-like marketing copy.</p>
+                        <span class="font-semibold text-indigo-600 dark:text-amber-500 group-hover:underline">Explore Process →</span>
                     </div>
                 </a>
 
-                <a href="skills.html" class="block bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden group">
+                <a href="skills.html" class="block bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-amber-500/10 transition-shadow duration-300 overflow-hidden group">
                      <div class="p-8">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Skills & Certifications</h3>
-                        <p class="text-gray-600 mb-4">A summary of my technical skills and formal education, including an A.S. in High-Performance Automotive Technology and proficiencies in AI and automation tools.</p>
-                        <span class="font-semibold text-indigo-600 group-hover:underline">View Skills →</span>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Skills & Certifications</h3>
+                        <p class="text-gray-600 dark:text-slate-400 mb-4">A summary of my technical skills and formal education, including an A.S. in High-Performance Automotive Technology and proficiencies in AI and automation tools.</p>
+                        <span class="font-semibold text-indigo-600 dark:text-amber-500 group-hover:underline">View Skills →</span>
                     </div>
                 </a>
 
@@ -93,10 +112,10 @@
         
     </main>
 
-    <footer class="bg-gray-800 text-white">
-        <div class="container mx-auto px-6 py-8 text-center">
+    <footer class="bg-gray-800 dark:bg-slate-800/50">
+        <div class="container mx-auto px-6 py-8 text-center text-white">
             <p>&copy; 2024 HSG Portfolio. All Rights Reserved.</p>
-            <p class="mt-2">Contact: <a href="mailto:hsg@hsgportfolio.com" class="text-indigo-400 hover:underline">hsg@hsgportfolio.com</a></p>
+            <p class="mt-2">Contact: <a href="mailto:hsg@hsgportfolio.com" class="text-indigo-400 dark:text-amber-400 hover:underline">hsg@hsgportfolio.com</a></p>
         </div>
     </footer>
 

@@ -1,6 +1,3 @@
-<!-- ============================================================================== -->
-<!-- FILE: certs.html (Certifications Page)                                         -->
-<!-- ============================================================================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,214 +10,104 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-gray-200 transition-colors duration-300">
 
-    <!-- Header & Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold text-gray-800">HSG</a>
+            <a href="index.html" class="text-xl font-bold text-gray-800 dark:text-white">HSG</a>
             
-            <!-- Mobile Menu Wrapper -->
             <div class="md:hidden">
-                <!-- Invisible checkbox peer -->
                 <input type="checkbox" id="menu-toggle" class="hidden peer">
-                
-                <!-- Hamburger Button (Label for checkbox) -->
                 <label for="menu-toggle" class="cursor-pointer">
-                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                     <svg class="w-6 h-6 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </label>
-                
-                <!-- Mobile Menu (Appears when checkbox is checked) -->
-                <div class="hidden absolute top-16 left-0 w-full bg-white shadow-lg peer-checked:block">
-                    <a href="automation.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Workflow Automation</a>
-                    <a href="prompt-engineering.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Prompt Engineering</a>
-                    <a href="other_prompts.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Other Prompts</a>
-                    <a href="certs.html" class="block py-3 px-6 text-center border-b bg-indigo-50 text-indigo-600 font-semibold">Certifications</a>
-                    <a href="skills.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Skills</a>
-                    <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-50">Contact</a>
+                <div class="hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-800 shadow-lg peer-checked:block">
+                    <a href="automation.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Workflow Automation</a>
+                    <a href="prompt-engineering.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Prompt Engineering</a>
+                    <a href="other_prompts.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Other Prompts</a>
+                    <a href="certs.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-amber-400 font-semibold">Certifications</a>
+                    <a href="skills.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Skills</a>
+                    <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-50 dark:hover:bg-slate-700">Contact</a>
                 </div>
             </div>
 
-            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-6">
-                <a href="automation.html" class="hover:text-indigo-600">Workflow Automation</a>
-                <a href="prompt-engineering.html" class="hover:text-indigo-600">Prompt Engineering</a>
-                <a href="other_prompts.html" class="hover:text-indigo-600">Other Prompts</a>
-                <a href="certs.html" class="text-indigo-600 font-semibold">Certifications</a>
-                <a href="skills.html" class="hover:text-indigo-600">Skills</a>
-                <a href="contact.html" class="hover:text-indigo-600">Contact</a>
+                <a href="automation.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Workflow Automation</a>
+                <a href="prompt-engineering.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Prompt Engineering</a>
+                <a href="other_prompts.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Other Prompts</a>
+                <a href="certs.html" class="text-indigo-600 dark:text-amber-400 font-semibold">Certifications</a>
+                <a href="skills.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Skills</a>
+                <a href="contact.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Contact</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-6 py-16">
-        <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto">
-            <article class="prose lg:prose-xl max-w-none">
-                <h1 class="text-4xl font-bold mb-8">My Certifications </h1>
-                <p class="text-lg text-gray-500 mb-8">This page features a comprehensive display of my technical certifications, complete with visuals and detailed descriptions of acquired skills.</p>
+        <div class="bg-white dark:bg-slate-800 p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto">
+            <article class="prose lg:prose-xl max-w-none dark:prose-invert">
+                <h1 class="text-4xl font-bold mb-8 text-gray-900 dark:text-white">My Certifications</h1>
+                <p class="text-lg text-gray-500 dark:text-slate-400 mb-8">This page features a comprehensive display of my technical certifications, complete with visuals and detailed descriptions of acquired skills.</p>
 
                 <section>
-                    <h2 class="text-2xl font-semibold mt-8 mb-4">Certification Highlights</h2>
+                    <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Certification Highlights</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        <!-- Certification: edX / Harvard University: CS50's Introduction to Artificial Intelligence with Python -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">edX / Harvard University: CS50's Introduction to Artificial Intelligence with Python</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: March 2025</p>
-            <img src="images/CS50AI.PNG"
-                 alt="edX Harvard CS50 Introduction to Artificial Intelligence with Python Certification screenshot"
-                 title="edX Harvard: CS50's Introduction to Artificial Intelligence with Python Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/F0F9FF/0EA5E9?text=CS50+AI+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>Fundamentals of AI: search algorithms (BFS, DFS, A*), game playing (Minimax)</li><li>Machine learning concepts: knowledge representation, logical inference</li><li>Probability and Bayesian networks</li><li>Python for AI development</li><li>Neural networks and deep learning basics</li></ul>
-        </div>
+                        <!-- Certification Card -->
+                        <div class="bg-gray-100 dark:bg-slate-700 p-6 rounded-lg text-center">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">edX / Harvard: CS50's AI with Python</h3>
+                            <p class="text-gray-600 dark:text-slate-400 text-sm mb-2">Completed: March 2025</p>
+                            <img src="images/CS50AI.PNG" alt="CS50 AI Certification" class="w-full rounded-lg shadow-md mx-auto mb-4" onerror="this.src='https://placehold.co/400x250/1E293B/FBBF24?text=CS50+AI+Cert'"/>
+                            <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-slate-300"><li>Fundamentals of AI</li><li>Machine learning concepts</li><li>Python for AI development</li></ul>
+                        </div>
+                        
+                        <!-- Repeat for other certifications -->
+                        <div class="bg-gray-100 dark:bg-slate-700 p-6 rounded-lg text-center">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">edX / Harvard: CS50's Cybersecurity</h3>
+                             <p class="text-gray-600 dark:text-slate-400 text-sm mb-2">Completed: April 2025</p>
+                            <img src="images/CS50CS.PNG" alt="CS50 Cybersecurity Certification" class="w-full rounded-lg shadow-md mx-auto mb-4" onerror="this.src='https://placehold.co/400x250/1E293B/FBBF24?text=CS50+Cyber+Cert'"/>
+                             <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-slate-300"><li>Common Cyber Threats</li><li>Securing Accounts</li><li>Data Protection</li></ul>
+                        </div>
+                        
+                        <div class="bg-gray-100 dark:bg-slate-700 p-6 rounded-lg text-center">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">freeCodeCamp: Responsive Web design</h3>
+                            <p class="text-gray-600 dark:text-slate-400 text-sm mb-2">Completed: May 2024</p>
+                            <img src="images/fccwb.PNG" alt="Responsive Web Design Certification" class="w-full rounded-lg shadow-md mx-auto mb-4" onerror="this.src='https://placehold.co/400x250/1E293B/FBBF24?text=RWD+Cert'"/>
+                            <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-slate-300"><li>HTML5, CSS3, Flexbox, Grid</li><li>Responsive design principles</li><li>Basic accessibility</li></ul>
+                        </div>
 
-        <!-- Certification: edX / Harvard University: CS50's Introduction to Cybersecurity -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">edX / Harvard University: CS50's Introduction to Cybersecurity</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: April 2025</p>
-            <img src="images/CS50CS.PNG"
-                 alt="edX Harvard CS50 Introduction to Cybersecurity Certification screenshot"
-                 title="edX Harvard: CS50's Introduction to Cybersecurity Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/FEF2F2/EF4444?text=CS50+Cyber+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>Understanding Common Cyber Threats and Attack Vectors:</li><li>Securing Accounts and Authentication</li><li>Data Protection and Cryptography Fundamentals</li><li>Network Security Fundamentals</li><li>System and Software Security Best Practices</li></ul>
-        </div>
+                        <div class="bg-gray-100 dark:bg-slate-700 p-6 rounded-lg text-center">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">freeCodeCamp: JavaScript</h3>
+                            <p class="text-gray-600 dark:text-slate-400 text-sm mb-2">Completed: June 2024</p>
+                            <img src="images/fccjs.PNG" alt="JavaScript Certification" class="w-full rounded-lg shadow-md mx-auto mb-4" onerror="this.src='https://placehold.co/400x250/1E293B/FBBF24?text=JS+Cert'"/>
+                            <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-slate-300"><li>Core JS Fundamentals</li><li>Algorithms & Data Structures</li><li>OOP & Functional Programming</li></ul>
+                        </div>
+                        
+                        <div class="bg-gray-100 dark:bg-slate-700 p-6 rounded-lg text-center">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">freeCodeCamp: Front End Libraries</h3>
+                             <p class="text-gray-600 dark:text-slate-400 text-sm mb-2">Completed: July 2024</p>
+                            <img src="images/fccfe.PNG" alt="Front End Libraries" class="w-full rounded-lg shadow-md mx-auto mb-4" onerror="this.src='https://placehold.co/400x250/1E293B/FBBF24?text=FE+Cert'"/>
+                             <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-slate-300"><li>React & JSX</li><li>Redux State Management</li><li>Bootstrap & Sass</li></ul>
+                        </div>
 
-        <!-- Certification: freeCodeCamp: Responsive Web design -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">freeCodeCamp: Responsive Web design</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: May 2024</p>
-            <img src="images/fccwb.PNG"
-                 alt="FreeCodeCamp Responsive Web Design Certification screenshot"
-                 title="FreeCodeCamp Responsive Web Design Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/E0E7FF/4F46E5?text=RWD+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>HTML5, CSS3, Flexbox, Grid</li><li>Responsive design principles</li><li>Basic accessibility standards</li><li>Building web layouts</li></ul>
-        </div>
-
-        <!-- Certification: freeCodeCamp: JavaScript Algorithms And Data Structures -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">freeCodeCamp: JavaScript Algorithms And Data Structures</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: June 2024</p>
-            <img src="images/fccjs.PNG"
-                 alt="FreeCodeCamp JavaScript Algorithms and Data Structures Certification screenshot"
-                 title="FreeCodeCamp JavaScript Algorithms and Data Structures Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/DBEAFE/3B82F6?text=JS+DSA+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>Core JavaScript Fundamentals (Basic JavaScript &amp; ES6)</li><li>Algorithms (Basic &amp; Intermediate Algorithm Scripting)</li><li>Data Structures</li><li>Programming Paradigms (Object-Oriented Programming &amp; Functional Programming)</li></ul>
-        </div>
-
-        <!-- Certification: freeCodeCamp: Front End Development Libraries -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">freeCodeCamp: Front End Development Libraries</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: July 2024</p>
-            <img src="images/fccfe.PNG"
-                 alt="FreeCodeCamp Front End Development Libraries Certification screenshot"
-                 title="FreeCodeCamp Front End Development Libraries Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/E2D1F7/6C2DC7?text=FE+Dev+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>React (and JSX)</li><li>Redux (for State Management)</li><li>Bootstrap (for Responsive Design and Styling)</li><li>Sass (CSS Preprocessing)</li></ul>
-        </div>
-
-        <!-- Certification: freeCodeCamp: Data visualization -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">freeCodeCamp: Data visualization</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: August 2024</p>
-            <img src="images/fccdv.PNG"
-                 alt="FreeCodeCamp Data Visualization Certification screenshot"
-                 title="FreeCodeCamp Data Visualization Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/CCE3DC/2E8B57?text=Data+Viz+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>D3.js (Data-Driven Documents)</li><li>Working with APIs and JSON</li><li>Core JavaScript for Data Manipulation</li><li>Responsive Design Principles (Implicitly with SVG/D3)</li></ul>
-        </div>
-
-        <!-- Certification: freeCodeCamp: Relational Databases -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">freeCodeCamp: Relational Databases</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: September 2024</p>
-            <img src="images/fccdb.PNG"
-                 alt="FreeCodeCamp Relational Databases Certification screenshot"
-                 title="FreeCodeCamp Relational Databases Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/F8D7DA/DC3545?text=DB+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>SQL (Structured Query Language)</li><li>PostgreSQL</li><li>Bash and Linux/Unix Command Line</li><li>Database Design and Relationships</li></ul>
-        </div>
-
-        <!-- Certification: freeCodeCamp: Scientific Computing with Python -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">freeCodeCamp: Scientific Computing with Python</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: October 2024</p>
-            <img src="images/fccps.PNG"
-                 alt="FreeCodeCamp Scientific Computing with Python Certification screenshot"
-                 title="FreeCodeCamp Scientific Computing with Python Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/D4EDDA/28A745?text=Sci+Py+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>Python Fundamentals and Problem Solving</li><li>Data Structures (Lists, Dictionaries, and Objects)</li><li>Data Handling and Interaction (Networking, APIs, Databases)</li><li>Data Visualization</li></ul>
-        </div>
-
-        <!-- Certification: freeCodeCamp: Back End Development and APIs -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">freeCodeCamp: Back End Development and APIs</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: March 2025</p>
-            <img src="images/fccbe.PNG"
-                 alt="FreeCodeCamp Back End Development and APIs Certification screenshot"
-                 title="FreeCodeCamp Back End Development and APIs Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/D1ECF1/17A2B8?text=BE+API+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>Node.js</li><li>Express.js</li><li>MongoDB and Mongoose</li><li>Building and Consuming APIs (Microservices)</li></ul>
-        </div>
-
-        <!-- Certification: freeCodeCamp: Quality Assurance -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">freeCodeCamp: Quality Assurance</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: March 2025</p>
-            <img src="images/fccqa.PNG"
-                 alt="FreeCodeCamp Quality Assurance Certification screenshot"
-                 title="FreeCodeCamp Quality Assurance Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/FFF3CD/FFC107?text=QA+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>Automated Testing with Chai (and Mocha implicitly)</li><li>Node.js and Express.js (for Backend Test Targets)</li><li>Headless Browser Testing (with tools like Zombie.js/Puppeteer concepts)</li><li>Debugging and Problem Solving</li></ul>
-        </div>
-
-        <!-- Certification: freeCodeCamp: Information Security -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">freeCodeCamp: Information Security</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: March 2025</p>
-            <img src="images/fccis.PNG"
-                 alt="FreeCodeCamp Information Security Certification screenshot"
-                 title="FreeCodeCamp Information Security Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/D6D8D9/6C757D?text=Info+Sec+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>Web Application Security with Helmet.js</li><li>Password Security (Hashing with BCrypt)</li><li>Basic Penetration Testing with Python</li><li>Building Secure APIs and Web Applications</li></ul>
-        </div>
-
-        <!-- Certification: freeCodeCamp: Machine Learning with Python -->
-        <div class="bg-gray-100 p-6 rounded-lg text-center">
-            <h3 class="text-xl font-semibold mb-3">freeCodeCamp: Machine Learning with Python</h3>
-            <p class="text-gray-600 text-sm mb-2">Completed: December 2024</p>
-            <img src="images/fccml.PNG"
-                 alt="FreeCodeCamp Machine Learning with Python Certification screenshot"
-                 title="FreeCodeCamp Machine Learning with Python Certification"
-                 class="w-full rounded-lg shadow-md mx-auto mb-4"
-                 onerror="this.src='https://placehold.co/400x250/E6F3F9/007BFF?text=ML+Python+Cert'"/>
-            <ul class="list-disc list-inside mt-2 text-gray-700"><li>TensorFlow and Neural Networks</li><li>Core Machine Learning Algorithms (Classification &amp; Regression)</li><li>Specialized Machine Learning Areas (CNN, RNN, NLP, Reinforcement Learning)</li><li>Practical Project Implementation</li></ul>
-        </div>
+                        <div class="bg-gray-100 dark:bg-slate-700 p-6 rounded-lg text-center">
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">freeCodeCamp: Data Visualization</h3>
+                            <p class="text-gray-600 dark:text-slate-400 text-sm mb-2">Completed: August 2024</p>
+                            <img src="images/fccdv.PNG" alt="Data Visualization Certification" class="w-full rounded-lg shadow-md mx-auto mb-4" onerror="this.src='https://placehold.co/400x250/1E293B/FBBF24?text=Data+Viz+Cert'"/>
+                            <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-slate-300"><li>D3.js</li><li>APIs and JSON</li><li>Data Manipulation</li></ul>
+                        </div>
 
                     </div>
                 </section>
 
-                <div class="mt-12 border-t pt-6">
-                     <a href="index.html" class="text-indigo-600 hover:underline">← Back to Home</a>
+                <div class="mt-12 border-t dark:border-slate-700 pt-6">
+                     <a href="index.html" class="text-indigo-600 dark:text-amber-400 hover:underline">← Back to Home</a>
                 </div>
             </article>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-16">
-        <div class="container mx-auto px-6 py-8 text-center">
+    <footer class="bg-gray-800 dark:bg-slate-800/50 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-white">
             <p>&copy; 2024 HSG Portfolio. All Rights Reserved.</p>
         </div>
     </footer>

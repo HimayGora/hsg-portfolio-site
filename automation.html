@@ -1,6 +1,3 @@
-<!-- ============================================================================== -->
-<!-- FILE: automation.html (Workflow Automation Page)                               -->
-<!-- ============================================================================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,63 +10,54 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 dark:bg-slate-900 dark:text-gray-200 transition-colors duration-300">
 
-    <!-- Header & Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold text-gray-800">HSG</a>
+            <a href="index.html" class="text-xl font-bold text-gray-800 dark:text-white">HSG</a>
             
-            <!-- Mobile Menu Wrapper -->
             <div class="md:hidden">
-                <!-- Invisible checkbox peer -->
                 <input type="checkbox" id="menu-toggle" class="hidden peer">
-                
-                <!-- Hamburger Button (Label for checkbox) -->
                 <label for="menu-toggle" class="cursor-pointer">
-                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                     <svg class="w-6 h-6 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </label>
-                
-                <!-- Mobile Menu (Appears when checkbox is checked) -->
-                <div class="hidden absolute top-16 left-0 w-full bg-white shadow-lg peer-checked:block">
-                    <a href="automation.html" class="block py-3 px-6 text-center border-b bg-indigo-50 text-indigo-600 font-semibold">Workflow Automation</a>
-                    <a href="prompt-engineering.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Prompt Engineering</a>
-                    <a href="other_prompts.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Other Prompts</a>
-                    <a href="certs.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Certifications</a>
-                    <a href="skills.html" class="block py-3 px-6 text-center border-b hover:bg-gray-50">Skills</a>
-                    <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-50">Contact</a>
+                <div class="hidden absolute top-16 left-0 w-full bg-white dark:bg-slate-800 shadow-lg peer-checked:block">
+                    <a href="automation.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 bg-indigo-50 dark:bg-slate-700 text-indigo-600 dark:text-amber-400 font-semibold">Workflow Automation</a>
+                    <a href="prompt-engineering.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Prompt Engineering</a>
+                    <a href="other_prompts.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Other Prompts</a>
+                    <a href="certs.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Certifications</a>
+                    <a href="skills.html" class="block py-3 px-6 text-center border-b dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700">Skills</a>
+                    <a href="contact.html" class="block py-3 px-6 text-center hover:bg-gray-50 dark:hover:bg-slate-700">Contact</a>
                 </div>
             </div>
 
-            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-6">
-                <a href="automation.html" class="text-indigo-600 font-semibold">Workflow Automation</a>
-                <a href="prompt-engineering.html" class="hover:text-indigo-600">Prompt Engineering</a>
-                <a href="other_prompts.html" class="hover:text-indigo-600">Other Prompts</a>
-                <a href="certs.html" class="hover:text-indigo-600">Certifications</a>
-                <a href="skills.html" class="hover:text-indigo-600">Skills</a>
-                <a href="contact.html" class="hover:text-indigo-600">Contact</a>
+                <a href="automation.html" class="text-indigo-600 dark:text-amber-400 font-semibold">Workflow Automation</a>
+                <a href="prompt-engineering.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Prompt Engineering</a>
+                <a href="other_prompts.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Other Prompts</a>
+                <a href="certs.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Certifications</a>
+                <a href="skills.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Skills</a>
+                <a href="contact.html" class="hover:text-indigo-600 dark:hover:text-amber-400">Contact</a>
             </div>
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main class="container mx-auto px-6 py-16">
-        <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto">
-            <article class="prose lg:prose-xl max-w-none">
-                <h1 class="text-4xl font-bold mb-2">Case Study: Automating Cold Email Outreach</h1>
-                <p class="text-lg text-gray-500 mb-8">Reducing manual drafting from 50 minutes to 5 minutes per email.</p>
+        <div class="bg-white dark:bg-slate-800 p-8 md:p-12 rounded-lg shadow-lg max-w-4xl mx-auto">
+            <article class="prose lg:prose-xl max-w-none dark:prose-invert">
+                <h1 class="text-4xl font-bold mb-2 text-gray-900 dark:text-white">Case Study: Automating Cold Email Outreach</h1>
+                <p class="text-lg text-gray-500 dark:text-slate-400 mb-8">Reducing manual drafting from 50 minutes to 5 minutes per email.</p>
                 
                 <section>
-                    <h2 class="text-2xl font-semibold mt-8 mb-4">The Problem: A Manual Bottleneck</h2>
+                    <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">The Problem: A Manual Bottleneck</h2>
                     <p>I observed that a common challenge in sales and marketing operations is the time-consuming and manual process of crafting personalized cold emails. An individual with limited prior experience in email marketing typically took 40-50 minutes to manually draft a single compelling email. This significant time investment inherently limits outreach volume and consistency, becoming a major bottleneck for scaling sales efforts.</p>
                 </section>
                 
                 <section>
-                    <h2 class="text-2xl font-semibold mt-8 mb-4">The Solution: AI-Powered Automation</h2>
+                    <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">The Solution: AI-Powered Automation</h2>
                     <p>To streamline this process, I designed and implemented an automated workflow leveraging Google Sheets for structured input and Google's Gemini AI for intelligent content generation. This system is followed by a crucial human-in-the-loop step for final personalization, ensuring quality and a human touch.</p>
-                    <div class="bg-gray-100 p-4 rounded-lg my-6">
-                        <h4 class="font-semibold">Simple Workflow:</h4>
+                    <div class="bg-gray-100 dark:bg-slate-700 p-4 rounded-lg my-6">
+                        <h4 class="font-semibold text-gray-900 dark:text-white">Simple Workflow:</h4>
                         <ol class="list-decimal list-inside mt-2">
                             <li>User populates a Google Sheet with lead data.</li>
                             <li>Gemini AI generates tailored email content based on the input.</li>
@@ -79,16 +67,16 @@
                 </section>
                 
                 <section>
-                    <h2 class="text-2xl font-semibold mt-8 mb-4">Impact & Business Value</h2>
+                    <h2 class="text-2xl font-semibold mt-8 mb-4 text-gray-900 dark:text-white">Impact & Business Value</h2>
                     <p>The introduction of this AI automation has transformed the cold email outreach process. The initial drafting phase, once consuming nearly an hour of manual effort, is now completed by AI in a fraction of that time. The human operator’s role shifts to a highly-focused 5-minute review and personalization process.</p>
                     <div class="grid md:grid-cols-2 gap-6 mt-6 text-center">
-                        <div class="bg-indigo-100 p-6 rounded-lg">
-                            <div class="text-4xl font-bold text-indigo-600">66%</div>
-                            <div class="text-gray-700 mt-2">Approximate Increase in Labor Efficiency</div>
+                        <div class="bg-indigo-100 dark:bg-slate-700 p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-indigo-600 dark:text-amber-400">66%</div>
+                            <div class="text-gray-700 dark:text-slate-300 mt-2">Approximate Increase in Labor Efficiency</div>
                         </div>
-                        <div class="bg-green-100 p-6 rounded-lg">
-                            <div class="text-4xl font-bold text-green-600">90%</div>
-                            <div class="text-gray-700 mt-2">Reduction in Time Spent on Drafting Content</div>
+                        <div class="bg-green-100 dark:bg-slate-700 p-6 rounded-lg">
+                            <div class="text-4xl font-bold text-green-600 dark:text-green-400">90%</div>
+                            <div class="text-gray-700 dark:text-slate-300 mt-2">Reduction in Time Spent on Drafting Content</div>
                         </div>
                     </div>
                     <ul class="list-disc list-outside mt-6 space-y-2 pl-5">
@@ -97,16 +85,15 @@
                         <li><b>Optimized Resources:</b> Free up valuable team time from tedious drafting for higher-value activities like strategic planning and relationship building.</li>
                     </ul>
                 </section>
-                <div class="mt-12 border-t pt-6">
-                     <a href="index.html" class="text-indigo-600 hover:underline">← Back to Home</a>
+                <div class="mt-12 border-t dark:border-slate-700 pt-6">
+                     <a href="index.html" class="text-indigo-600 dark:text-amber-400 hover:underline">← Back to Home</a>
                 </div>
             </article>
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white mt-16">
-        <div class="container mx-auto px-6 py-8 text-center">
+    <footer class="bg-gray-800 dark:bg-slate-800/50 mt-16">
+        <div class="container mx-auto px-6 py-8 text-center text-white">
             <p>&copy; 2024 HSG Portfolio. All Rights Reserved.</p>
         </div>
     </footer>
