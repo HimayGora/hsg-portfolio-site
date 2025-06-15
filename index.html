@@ -81,31 +81,39 @@
 
         <section id="projects" class="py-16">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Case Studies & Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- UPDATED LAYOUT CONTAINER -->
+            <div class="flex flex-col items-center w-full space-y-8">
                 
-                <a href="automation.html" class="block bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-amber-500/10 transition-shadow duration-300 overflow-hidden group">
-                    <div class="p-8">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">AI-Powered Email Automation</h3>
-                        <p class="text-gray-600 dark:text-slate-400 mb-4">A case study on developing a system that reduced manual email drafting time from 50 minutes down to just 5, achieving a 66% increase in labor efficiency.</p>
-                        <span class="font-semibold text-indigo-600 dark:text-amber-500 group-hover:underline">View Case Study →</span>
-                    </div>
-                </a>
+                <!-- FEATURED CARD: Centered and larger on wide screens -->
+                <div class="w-full md:w-3/4 lg:w-2/3">
+                    <a href="automation.html" class="block h-full bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-amber-500/10 transition-shadow duration-300 overflow-hidden group ring-2 ring-indigo-500/50 dark:ring-amber-500/50 transform hover:-translate-y-2">
+                        <div class="p-8">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Featured Study: AI Workflow Automation</h3>
+                            <p class="text-gray-600 dark:text-slate-400 mb-4">An end-to-end business solution with quantified results, including a 66% increase in labor efficiency and a full Standard Operating Procedure (SOP).</p>
+                            <span class="font-semibold text-indigo-600 dark:text-amber-500 group-hover:underline">View Case Study →</span>
+                        </div>
+                    </a>
+                </div>
 
-                <a href="prompt-engineering.html" class="block bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-amber-500/10 transition-shadow duration-300 overflow-hidden group">
-                    <div class="p-8">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Iterative Prompt Engineering</h3>
-                        <p class="text-gray-600 dark:text-slate-400 mb-4">An exploration of the iterative process used to refine prompts for Large Language Models, transforming robotic outputs into professional, human-like marketing copy.</p>
-                        <span class="font-semibold text-indigo-600 dark:text-amber-500 group-hover:underline">Explore Process →</span>
-                    </div>
-                </a>
+                <!-- WRAPPER FOR OTHER TWO CARDS -->
+                <div class="w-full grid md:grid-cols-2 gap-8 pt-8">
+                    <a href="prompt-engineering.html" class="block h-full bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-amber-500/10 transition-shadow duration-300 overflow-hidden group transform hover:-translate-y-2">
+                        <div class="p-8">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Iterative Prompt Engineering</h3>
+                            <p class="text-gray-600 dark:text-slate-400 mb-4">An exploration of the iterative process used to refine prompts for Large Language Models, transforming robotic outputs into professional, human-like marketing copy.</p>
+                            <span class="font-semibold text-indigo-600 dark:text-amber-500 group-hover:underline">Explore Process →</span>
+                        </div>
+                    </a>
 
-                <a href="skills.html" class="block bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-amber-500/10 transition-shadow duration-300 overflow-hidden group">
-                     <div class="p-8">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Skills & Certifications</h3>
-                        <p class="text-gray-600 dark:text-slate-400 mb-4">A summary of my technical skills and formal education, including an A.S. in High-Performance Automotive Technology and proficiencies in AI and automation tools.</p>
-                        <span class="font-semibold text-indigo-600 dark:text-amber-500 group-hover:underline">View Skills →</span>
-                    </div>
-                </a>
+                    <a href="skills.html" class="block h-full bg-white dark:bg-slate-800 rounded-lg shadow-lg hover:shadow-2xl dark:hover:shadow-amber-500/10 transition-shadow duration-300 overflow-hidden group transform hover:-translate-y-2">
+                         <div class="p-8">
+                            <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Skills & Certifications</h3>
+                            <p class="text-gray-600 dark:text-slate-400 mb-4">A summary of my technical skills and formal education, including a wide range of certifications in AI, web development, and cybersecurity.</p>
+                            <span class="font-semibold text-indigo-600 dark:text-amber-500 group-hover:underline">View Skills →</span>
+                        </div>
+                    </a>
+                </div>
 
             </div>
         </section>
